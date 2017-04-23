@@ -1,5 +1,5 @@
 # proxy-off
-Create /usr/local/bin/proxy-off
+## Ansible role for creating '/usr/local/bin/proxy-off'
 
 Usage:
 ```
