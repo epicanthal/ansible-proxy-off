@@ -2,4 +2,6 @@
 Create /usr/local/bin/proxy-off
 
 Usage:
-    source proxy-off
+```
+source proxy-off
+```
