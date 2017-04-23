@@ -1,0 +1,14 @@
+galaxy_info:
+  author: epicanthal
+  description: Create /usr/local/bin/proxy-off
+  company:
+  license: license BSD
+  min_ansible_version: 1.8
+  platforms:
+  - name: MacOSX
+    versions:
+    - all
+  galaxy_tags:
+    - macos
+    - proxy
+dependencies:

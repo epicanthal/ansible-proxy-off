@@ -1,0 +1,7 @@
+---
+# run autofs role
+
+  - hosts: localhost
+
+    roles:
+      - proxy-off 

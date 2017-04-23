@@ -1,0 +1,28 @@
+---
+# Create '/usr/local/bin/proxy-off'
+#   To use: 'source proxy-off'
+#   Assumes /usr/local/bin is part of the current $PATH
+
+  - name: check current status of /usr/local/bin/proxy-off
+    stat:
+      path: /usr/local/bin/proxy-off
+    register: proxy_off_stat
+
+  - name: create /usr/local/bin/proxy-off if it does not exist
+    file:
+      path: /usr/local/bin/proxy-off
+      state: touch
+      mode: o+rwx,g+rx,u+rx
+    when: proxy_off_stat.stat.exists == false
+    become: true
+
+  - name: template /usr/local/bin/proxy-off
+    template:
+      src: proxy-off.j2
+      dest: /usr/local/bin/proxy-off
+    register: template_output
+    become: true
+
+  - name: dump template output if /usr/local/bin/proxy-off changed
+    debug: var=template_output
+    when: template_output.changed == true
