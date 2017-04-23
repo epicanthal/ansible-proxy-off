@@ -3,5 +3,5 @@ Create /usr/local/bin/proxy-off
 
 Usage:
 ```
-source proxy-off
+terminal$> source proxy-off
 ```
